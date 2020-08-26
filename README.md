@@ -4,7 +4,7 @@
 
 -----------------------------------------------
 
-*Motivation:* There are cases where use of a module depends on a globally defined and initialzed struct within that module. A pattern to ensure such a global struct would be be available in such a module would be to define the global struct as being assigned the output of an initialization function. When a project pulls in numerous modules following this pattern, there can be performance lag in startup of the program since each assignment is blocking. The `mod_init` module alleviates this issue by initializing each module in concurrently.
+*Motivation:* There are cases where use of a module depends on a globally defined and initialzed struct within that module. A pattern to ensure such a global struct would be be available in such a module would be to define the global struct as being assigned the output of an initialization function. When a project pulls in numerous modules following this pattern, there can be performance lag in startup of the program since each assignment is blocking. The `mod_init` module alleviates this issue by initializing each module concurrently.
 
 *Example use:*
 
